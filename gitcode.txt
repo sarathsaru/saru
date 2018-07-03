@@ -1,0 +1,325 @@
+
+win 7@win7-PC MINGW64 ~
+$ mkdir newproject
+
+win 7@win7-PC MINGW64 ~
+$ pwd
+/c/Users/win 7
+
+win 7@win7-PC MINGW64 ~
+$ cd newproject
+
+win 7@win7-PC MINGW64 ~/newproject
+$ git init
+Initialized empty Git repository in C:/Users/win 7/newproject/.git/
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git add .
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git commit -m "added color"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'win 7@win7-PC.(none)')
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git config --global user.email "you@example.com"
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git config --global user.email "keltronsarutty@gmail.com"
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git config --global user.name "saru"
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git commit -m "added color"
+[master (root-commit) b2af160] added color
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git log
+commit b2af1606a31e0b900fec194a59403abb1588c47e (HEAD -> master)
+Author: saru <keltronsarutty@gmail.com>
+Date:   Sat Apr 28 11:56:28 2018 +0530
+
+    added color
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git remote add origin https://github.com/sarathsaru/saru.git
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git remote -v
+origin  https://github.com/sarathsaru/saru.git (fetch)
+origin  https://github.com/sarathsaru/saru.git (push)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git push origin master
+Username for 'https://github.com': sarathsaru
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 221 bytes | 221.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sarathsaru/saru.git
+ * [new branch]      master -> master
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ touch index1.html
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ ls
+index.html  index1.html
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index1.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ s git commit -m index1.html
+bash: s: command not found
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index1.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ s git add index1.html
+bash: s: command not found
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ s git status
+bash: s: command not found
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index1.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git add index1.html
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index1.html
+
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ $ git commit -m "added color"
+bash: $: command not found
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git commit -m "finally added"
+[master e70975b] finally added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index1.html
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git push origin master
+Username for 'https://github.com': sarathsaru
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sarathsaru/saru.git
+   b2af160..e70975b  master -> master
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/sarathsaru/saru
+ * branch            master     -> FETCH_HEAD
+   e70975b..1784340  master     -> origin/master
+Updating e70975b..1784340
+Fast-forward
+ index1.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git remote -v
+origin  https://github.com/sarathsaru/saru.git (fetch)
+origin  https://github.com/sarathsaru/saru.git (push)
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git branch like
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git branch
+  like
+* master
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git checkout like
+Switched to branch 'like'
+
+win 7@win7-PC MINGW64 ~/newproject (like)
+$ git branch
+* like
+  master
+
+win 7@win7-PC MINGW64 ~/newproject (like)
+$ git status
+On branch like
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+win 7@win7-PC MINGW64 ~/newproject (like)
+$ git add .
+
+win 7@win7-PC MINGW64 ~/newproject (like)
+$ git commit -m "added like feature"
+[like 61437df] added like feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 style.css
+
+win 7@win7-PC MINGW64 ~/newproject (like)
+$ git push origin like
+Username for 'https://github.com': sarathsaru
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sarathsaru/saru.git
+ * [new branch]      like -> like
+
+win 7@win7-PC MINGW64 ~/newproject (like)
+$ git checkout master
+Switched to branch 'master'
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ ls
+index.html  index1.html
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git merge like
+Updating 1784340..61437df
+Fast-forward
+ style.css | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 style.css
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ ls
+index.html  index1.html  style.css
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git log
+commit 61437df670d378dfc53a681e10f544d50d793f9d (HEAD -> master, origin/like, like)
+Author: saru <keltronsarutty@gmail.com>
+Date:   Sat Apr 28 12:31:34 2018 +0530
+
+    added like feature
+
+commit 17843403422501bf862cf1280fee294cdf047a09 (origin/master)
+Author: sarathsaru <38804522+sarathsaru@users.noreply.github.com>
+Date:   Sat Apr 28 12:26:17 2018 +0530
+
+    Update index1.html
+
+commit e70975b50533db49faf611847f946e360cbe917f
+Author: saru <keltronsarutty@gmail.com>
+Date:   Sat Apr 28 12:22:18 2018 +0530
+
+    finally added
+
+commit b2af1606a31e0b900fec194a59403abb1588c47e
+Author: saru <keltronsarutty@gmail.com>
+Date:   Sat Apr 28 11:56:28 2018 +0530
+
+    added color
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+win 7@win7-PC MINGW64 ~/newproject (master)
+$ git push origin master
+Username for 'https://github.com': sarathsaru
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/sarathsaru/saru.git
+   1784340..61437df  master -> master
+
+win 7@win7-PC MINGW64 ~/newproject (master)
